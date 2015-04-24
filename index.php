@@ -40,12 +40,12 @@
 
 	function add_task() {
 		$('.add-new-task').submit(function() {
-			var new_task = $('.add-new-task input [name=new-task]').val();
+			var new_task = $('.add-new-task input[name=new-task]').val();
 
 			if (new_task != '') {
 				$.post('includes/add-task.php', { task: new_task}, function(data) {
 					$('add-new-task input[name=new_task]').val();
-					$(data).appendTo('task-list ul').hide().fadeIn();
+					$(data).appendTo('.task-list ul').hide().fadeIn();
 				});
 			}
 			return false;
@@ -54,7 +54,7 @@
 
 	$('.delete-button').click(function() {
 		//variables made
-		var current_element = (this);
+		var current_element = $(this);
 		var task_id = $(this).attr('id');
 //calls created variables
 		$.post('includes/delete-task.php', {id: task_id}, function() {
