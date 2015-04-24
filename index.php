@@ -34,7 +34,7 @@
 		</form>
 	</div>
 </body>
-<script src="http://code.jquery-lastest.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 	add_task(); //calls the add task function created below
 
