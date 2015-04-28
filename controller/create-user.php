@@ -11,7 +11,7 @@
     $query = $_SESSION["connection"]->query("SELECT * FROM listusers WHERE username = '$username'");
 
     if ($query->num_rows == 0) {
-        $query = $_SESSION["connection"]->query("INSERT INTO users SET "
+        $query = $_SESSION["connection"]->query("INSERT INTO listusers SET "
                 . "email = '$email', "
                 . "username = '$username', "
                 . "password = '$hashedPassword', "

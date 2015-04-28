@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+require_once(__DIR__ . "/model/config.php")
+ ?>
 <html>
 <head>
 	<title>todo list2</title>
@@ -6,6 +9,19 @@
 	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
 
 </head>
+<header>
+
+<button type="button">
+	<a href="<?php echo $path . "register.php"?>">register</a>
+</button>
+<button type="button">
+	<a href="<?php echo $path . "login.php"?>">Login</a>
+</button>
+<button type="button">
+	<a href="<?php echo $path . "controller/logout-user.php"?>">Logout</a>
+</button>
+
+</header>
 <body>
 	<div class="wrap">
 	<div class="task-list">
