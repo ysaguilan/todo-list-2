@@ -8,7 +8,7 @@
     $salt = "$5$" . "rounds=5000$" . uniqid(mt_rand(), true) . "$";
     $hashedPassword = crypt($password, $salt);
 
-    $query = $_SESSION["connection"]->query("SELECT * FROM users WHERE username = '$username'");
+    $query = $_SESSION["connection"]->query("SELECT * FROM listusers WHERE username = '$username'");
 
     if ($query->num_rows == 0) {
         $query = $_SESSION["connection"]->query("INSERT INTO users SET "
