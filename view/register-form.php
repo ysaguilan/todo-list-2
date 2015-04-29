@@ -3,6 +3,8 @@
 ?>
 
 <h1>Register</h1>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
 
 <form method="POST" action="<?php echo $path . "controller/create-user.php"; ?>">
     <div>

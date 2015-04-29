@@ -10,17 +10,16 @@ require_once(__DIR__ . "/model/config.php")
 
 </head>
 <header>
+<div class="links">
 
-<button type="button">
 	<a href="<?php echo $path . "register.php"?>">register</a>
-</button>
-<button type="button">
-	<a href="<?php echo $path . "login.php"?>">Login</a>
-</button>
-<button type="button">
-	<a href="<?php echo $path . "controller/logout-user.php"?>">Logout</a>
-</button>
 
+
+	<a href="<?php echo $path . "login.php"?>">Login</a>
+
+	<a href="<?php echo $path . "controller/logout-user.php"?>">Logout</a>
+
+</div>
 </header>
 <body>
 	<div class="wrap">
@@ -29,7 +28,7 @@ require_once(__DIR__ . "/model/config.php")
 		<?php	require("includes/connect.php");
 		$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 		//ASC = ascending
-		$query = "SELECT * FROM tasks ORDER BY  date ASC, time ASC";
+		$query = "SELECT * FROM task ORDER BY  date ASC, time ASC";
 		if ($result = $mysqli->query($query)) {
 			$numrows = $result->num_rows;
 			if ($numrows>0) {
